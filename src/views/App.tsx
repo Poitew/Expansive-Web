@@ -1,11 +1,11 @@
+import Descrizione from '../components/descrizione/descrizione';
 import Home from '../components/home/Home';
-import Lavori from '../components/lavori/Lavori';
 
 function App() {
     return (
         <>
             <Home></Home>
-            <Lavori></Lavori>
+            <Descrizione></Descrizione>
         </>
     );
 }

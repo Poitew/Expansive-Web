@@ -1,3 +1,26 @@
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(300px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes SuGiu {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .home {
     height: 100vh;
     display: flex;
@@ -10,15 +33,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3vh 0;
-    margin-top: 10%;
-    padding-left: 5%;
+    gap: 10vh 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
 }
 
 .title {
     width: 45vw;
+    animation: fadeInFromBottom 1.5s ease-in-out;
 }
 
 .description {
     font-size: 2vw;
+    animation: fadeInFromBottom 1.5s ease-in-out;
+}
+
+.freccia {
+    width: 2vw;
+    animation: SuGiu 1.3s ease-in-out infinite;
+    filter: invert(1);
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.start_presentation {
+    display: flex;
+    gap: 7vw;
+    animation: fadeInFromBottom 1.5s ease-in-out;
+}
+
+.numero  {
+    font-size: 5vw;
+    border-top: 1px white solid;
+    width: 15vw;
+}
+
+.descrizione_numero {
+    width: 15vw;
+    font-size: 1vw;
+}
+
+.sezione {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
