@@ -1,32 +1,24 @@
 @keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(300px); 
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(150px); 
+    }   
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes SuGiu {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.home {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .info_container {
@@ -34,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10vh 0;
+    animation: fadeInFromBottom 1.5s ease-in-out;
 }
 
 .logo {
@@ -43,28 +36,25 @@
     gap: 2vh;
 }
 
-.title {
+.titolo {
     width: 45vw;
-    animation: fadeInFromBottom 1.5s ease-in-out;
 }
 
 .description {
     font-size: 2vw;
-    animation: fadeInFromBottom 1.5s ease-in-out;
 }
 
 .freccia {
-    width: 2vw;
+    width: 3vw;
     animation: SuGiu 1.3s ease-in-out infinite;
     filter: invert(1);
     margin-top: 5%;
     cursor: pointer;
 }
 
-.start_presentation {
+.statistiche_container {
     display: flex;
     gap: 7vw;
-    animation: fadeInFromBottom 1.5s ease-in-out;
 }
 
 .numero  {

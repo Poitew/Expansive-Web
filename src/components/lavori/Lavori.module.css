@@ -1,0 +1,30 @@
+.main {
+    padding: 0 0 0 5%;
+    min-height: 75vh;
+}
+
+.flex {
+    margin-top: 5%;
+    display: flex;
+}
+
+.lavoro {
+    min-height: 15vh;
+    padding: 2.5%;
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.25s all ease-in-out;
+}
+
+.lavoro:hover {
+    box-shadow: 0 0 10px 0 silver;
+    background-color: rgb(15, 15, 15);
+}
+
+.titolo {
+    font-size: 2.5vw;
+    font-weight: 300;
+}

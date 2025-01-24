@@ -1,7 +1,4 @@
 .main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     padding: 0 0 0 5%;
 }
 
@@ -10,14 +7,6 @@
     flex-direction: column;
 }
 
-.titolo {
-    font-size: 5vw;
-    font-weight: 300;
-}
-
 .descrizione {
-    font-size: 1.25vw;
     margin-bottom: 17.5%;
-    line-height: 2vw;
-    font-weight: 300;
 }
