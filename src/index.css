@@ -12,10 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-body, html {
-    scroll-behavior: smooth;
-}
-
 main {
     min-width: 100%;
 }

@@ -15,6 +15,11 @@ function Home() {
 }
 
 function Main() {
+    const scrollToSection = () => {
+        const section = document.getElementById("scegliere_noi");
+        section.scrollIntoView({ behavior: "smooth" });
+    };
+
     return(
         <main className={styles.main}>
             <div className={styles.container_titoli}>
@@ -39,12 +44,12 @@ function Main() {
                 </section>
             </div>
             
-            <a className={styles.freccia} href="#scegliere_noi"><img src="/arrow_down.svg" alt="Arrow pointing down" /></a>
+            <button onClick={scrollToSection} className={styles.freccia} href="#scegliere_noi"><img src="/arrow_down.svg" alt="Arrow pointing down" /></button>
         </main>
     );
 }
 
-function ScegliereNoi(){
+function ScegliereNoi() {
     return(
         <div className={styles.scegliere_noi} id="scegliere_noi">
             <h2 className={styles.titolo}>Perché scegliere noi</h2>
@@ -58,7 +63,7 @@ function ScegliereNoi(){
 
             <div className={styles.container_link}>
                 <Link to="/servizi" className={styles.link}>Servizi</Link>
-                <Link Link to="/lavori"  className={styles.link}>Lavori</Link>
+                <Link to="/lavori"  className={styles.link}>Lavori</Link>
             </div>
         </div>
     );
@@ -88,7 +93,24 @@ function Footer() {
             <img className={styles.freccia_no_animazione} src="/arrow_up.svg" alt="Arrow pointing down" onClick={cambiaStato} ref={freccia} />
 
             <footer className={styles.footer} ref={footer}>
-                <p>© 2028</p>
+
+                <section className={styles.sezione_azienda}>
+                    <h3 className={styles.footer_h3}>Expansive Web:</h3>
+                    <div className={styles.container_posizione}>
+                        <img className={styles.footer_immagine} src="posizione.svg" alt="logo posizione" />
+                        <p>Situata a Napoli</p>
+                    </div>
+                </section>
+
+                <section className={styles.sezione_servizi}>
+                    <h3 className={styles.footer_h3}>Servizi:</h3>
+                    <ul>
+                        <li>Sviluppo Web</li>
+                        <li>SEO Growing</li>
+                        <li>Consulenza Hosting e Domini</li>
+                    </ul>
+                </section>
+
             </footer>
         </div>
     );
