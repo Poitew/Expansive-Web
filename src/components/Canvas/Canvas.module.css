@@ -1,5 +1,5 @@
 .canvas {
-    position: fixed; /* Cambia da absolute a fixed per mantenerlo sempre visibile durante lo scroll */
+    position: fixed;
     z-index: -2;
     top: 0;
     left: 0;

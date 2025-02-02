@@ -9,24 +9,6 @@
     }
 }
 
-@keyframes appicc {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes borderRotate {
     0% {
       border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
@@ -45,30 +27,25 @@
     }
 }
 
-.container_illuminato {
-    width: 40vw;
-    height: 20vh;
-    background-color: #1e304e;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 5px #1a2a46, 0 0 0 5px #1a2a46;
-    filter: blur(90px);
-    position: absolute;
-    z-index: -1;
-    animation: appicc 1.5s;
-    top: -150px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }
 
 .main {
-    height: 86vh;
+    height: 105vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    animation: fadeInFromBottom 1.5s ;
+    animation: fadeInFromBottom 1.5s;
+    overflow-x: hidden;
+    gap: 10vh 0;
 }
 
-.h1 {
+.titolo {
     font-size: 6vw;
-    margin: 5% 0 3% 0;
+    margin: 3% 0 0 0;
     letter-spacing: 0.5vw;
 }
 
@@ -81,9 +58,9 @@
 }
 
 .servizio {
-    padding: 10% 5%;
-    width: 10vw;
-    height: 25vh;
+    padding: 5%;
+    width: 15vw;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,36 +81,31 @@
 
 .img {
     width: 5vw;
+    height: 10vh;
+    object-fit: contain;
     filter: invert(1) sepia(1) saturate(5) hue-rotate(170deg);
     margin-bottom: 10%;
 }
 
-.h2_servizio {
-    width: 11vw;
+.sotto_titolo {
     font-size: 1.2vw;
 }
 
-.p_servizio {
-    width: 9vw;
-    font-size: 0.9vw;
+.descrizione {
+    font-size: 1vw;
 }
-/* fine struttura del servizio */
 
-.bottone {
+.link {
     width: 8vw;
-    height: 4vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1vw;
     border-radius: 0.5vw;
     border: 2px solid #BFC7D2;
-    text-decoration: none;
-    color: inherit;
-    margin-top: 5%;
+    transition: all 0.3s ease-in-out;
 }
 
-.bottone:hover {
-    border: 2px solid #07398a;
-    background-color: #1a2a46;
+.link:hover {
+    box-shadow: 0 0 5px 0 #BFC7D2;
 }
