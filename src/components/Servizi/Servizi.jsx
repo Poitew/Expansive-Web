@@ -1,9 +1,31 @@
 import styles from "./Servizi.module.css";
+import { Link } from "react-router-dom";
 
 function Servizi() {
     return (
         <main className={styles.main}>
-            
+            <div className={styles.container_illuminato}></div>
+            <h1 className={styles.h1}>SERVIZI</h1>
+            <div className={styles.container_servizi}>
+                <div className={styles.servizio}>
+                    <img className={styles.img} src="computer.svg" alt="immagine computer" />
+                    <h2 className={styles.h2_servizio}>RESPONSIVE</h2>
+                    <p className={styles.p_servizio}>I nostri siti sono progettati per essere adatatti su tutti i dispositivi, dal desktop al mobile</p>
+                </div>
+
+                <div className={styles.servizio}>
+                    <img className={styles.img} src="react.svg" alt="logo react" />
+                    <h2 className={styles.h2_servizio}>DINAMICI</h2>
+                    <p className={styles.p_servizio}>siti web adatti per ogni esigenza con funzionalità di login, prenotazione e moltro altro</p>
+                </div>
+                
+                <div className={styles.servizio}>
+                    <img className={styles.img} src="ottimizzato.svg" alt="grafico di ottimizzazione" />
+                    <h2 className={styles.h2_servizio}>SEO GROWING</h2>
+                    <p className={styles.p_servizio}>Siti web ottimizzati per migliorare il posizionamento sui motori di ricerca</p>
+                </div>
+            </div>
+            <Link to="/" className={styles.bottone}>Home</Link>
         </main>
     );
 }

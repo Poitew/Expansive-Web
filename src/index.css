@@ -9,4 +9,5 @@ body {
     background-color: #10151D;
     color: #BFC7D2;
     font-family: "Montserrat";
+    overflow-x: hidden;
 }

@@ -35,6 +35,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: fadeInFromBottom 1.5s;
 }
 
 .container_illuminato {
@@ -46,8 +47,9 @@
     filter: blur(80px);
     position: absolute;
     z-index: -1;
-    margin-bottom: 45%;
+    margin: 0 0 0 25%;
     animation: appicc 1.5s;
+    top: -110px;
 }
 
 .container_titoli {
@@ -55,7 +57,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeInFromBottom 2s;
 }
 
 .h1 {
@@ -73,14 +74,12 @@
     font-size: 1vw;
     line-height: 4vh;
     font-weight: 400;
-    animation: fadeInFromBottom 2s;
 }
 
 .statistiche_container {
     display: flex;
     gap: 1.5vw;
     text-align: center;
-    animation: fadeInFromBottom 2s;
 }
 
 .numero  {
@@ -104,39 +103,39 @@
 .container_bottoni {
     display: flex;
     align-items: center;
-    animation: fadeInFromBottom 2s;
     margin-top: 5%;
     gap: 1.5vw;
 }
 
-.bottone_servizi {
-    width: 6vw;
+.bottone {
+    width: 8vw;
     height: 4vh;
-    border-radius: 3.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    border-radius: 4vw;
     border: 2px solid #BFC7D2;
-    font-size: 0.8vw;
-    background-color: #10151D;
-    color: #BFC7D2;
-    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
 }
 
-.bottone_servizi:hover {
+.bottone:hover {
     border: 2px solid #07398a;
     background-color: #1a2a46;
 }
 
-.bottone_lavori {
-    width: 6vw;
-    height: 4vh;
-    border-radius: 3.2vw;
-    border: 2px solid #BFC7D2;
-    font-size: 0.8vw;
-    background-color: #10151D;
-    color: #BFC7D2;
-    transition: all 0.3s ease-in-out;
+/*sezione perche' scegliere noi*/
+.scegliere_noi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30% 0 15% 0;
+    text-align: center;
 }
 
-.bottone_lavori:hover {
-    border: 2px solid #07398a;
-    background-color: #1a2a46;
+.scegliere_noi_h2 {
+    font-size: 6vw;
+    margin-bottom: 3%;
 }
