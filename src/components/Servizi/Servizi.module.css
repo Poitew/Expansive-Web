@@ -1,14 +1,3 @@
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(150px); 
-    }   
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes borderRotate {
     0% {
       border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
@@ -34,11 +23,10 @@
 }
 
 .main {
-    height: 105vh;
+    min-height: 105vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    animation: fadeInFromBottom 1.5s;
     overflow-x: hidden;
     gap: 10vh 0;
 }
@@ -104,8 +92,127 @@
     border-radius: 0.5vw;
     border: 2px solid #BFC7D2;
     transition: all 0.3s ease-in-out;
+    border-image-slice: 1;
+    animation: borderRotate 5s infinite linear;
+    font-size: 1vw;
 }
 
-.link:hover {
-    box-shadow: 0 0 5px 0 #BFC7D2;
+@media only screen and (max-width: 768px) {
+    .titolo {
+        font-size: 8vw; /* Ridurre la dimensione del titolo per i dispositivi più piccoli */
+        margin-top: 5%;
+    }
+
+    .container_servizi {
+        flex-direction: column; /* Disporre i servizi verticalmente */
+        gap: 5vh; /* Spaziatura verticale tra i servizi */
+    }
+
+    .servizio {
+        width: 70vw; /* Rende ogni servizio più largo sui dispositivi più piccoli */
+        min-height: 25vh; /* Ridurre l'altezza per fare più spazio */
+        padding: 10%;
+    }
+
+    .img {
+        width: 20vw; /* Aumenta la larghezza delle immagini per schermi più piccoli */
+        height: 15vh; /* Ridurre l'altezza per adattarsi meglio */
+    }
+
+    .sotto_titolo {
+        font-size: 4vw; /* Ridurre la dimensione del sottotitolo */
+    }
+
+    .descrizione {
+        font-size: 4vw; /* Ridurre la dimensione del testo descrittivo */
+    }
+
+    .link {
+        width: 30vw; /* Adattare la larghezza dei link per dispositivi piccoli */
+        height: 5vh;
+        font-size: 5vw; /* Ridurre la dimensione del testo nei link */
+        margin-bottom: 15%;
+    }
+
+    
+}
+
+/* Medium devices (tablets, between 700px and 1024px) */
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+    .titolo {
+        font-size: 6vw;
+    }
+
+    .container_servizi {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 35% 35%;
+        gap: 4vw;
+    }
+
+    .servizio:nth-child(3) {
+        padding: 0;
+        width: 100%;
+        grid-area: 2 / 1 / 2 / 3;
+    }
+
+    .servizio {
+        padding: 0;
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    .img {
+        width: 10vw; /* Regolare la larghezza dell'immagine per tablet */
+        height: 12vh;
+    }
+
+    .sotto_titolo {
+        font-size: 3vw;
+    }
+
+    .descrizione {
+        font-size: 1.8vw;
+    }
+
+    .link {
+        width: 20vw;
+        height: 6vh;
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 3840px) and (min-resolution: 2dppx) {
+    .titolo {
+        font-size: 8vw;
+        margin: 7% 0 0 0;
+        letter-spacing: 0.75vw;
+    }
+
+    .servizio {
+        width: 20vw;
+        min-height: 20vh;
+        border: white solid 4px;
+        border-image-slice: 1;
+    }
+    
+    .img {
+        width: 8vw;
+    }
+
+    .sotto_titolo {
+        font-size: 1.5vw;
+    }
+
+    .descrizione {
+        font-size: 1.1vw;
+        line-height: 3vh;
+    }
+
+    .link {
+        width: 12vw;
+        font-size: 1.4vw;
+        border: white solid 3px;
+        border-image-slice: 1;
+    }
 }

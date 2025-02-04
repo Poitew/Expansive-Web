@@ -1,32 +1,3 @@
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(150px); 
-    }   
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes appicc {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes suGiù {
     0% {
         transform: translateY(0);
@@ -51,21 +22,6 @@
     align-items: center;
     justify-content: center;
     gap: 10vh 0;
-    animation: fadeInFromBottom 1.5s;
-}
-
-.container_illuminato {
-    width: 50vw;
-    height: 20vh;
-    background-color: #1e304e;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 5px #1a2a46, 0 0 0 5px #1a2a46;
-    filter: blur(80px);
-    position: absolute;
-    z-index: -1;
-    margin: 0 0 0 25%;
-    animation: appicc 1.5s;
-    top: -110px;
 }
 
 .container_titoli {
@@ -120,8 +76,11 @@
     filter: invert(1) sepia(1) saturate(5) hue-rotate(170deg);
     cursor: pointer;
     animation: suGiù 1.75s infinite ease-in-out;
+    border: none;
+    background: none;
 }
 
+/*scegliere noi*/
 .container_link {
     display: flex;
     align-items: center;
@@ -138,13 +97,13 @@
     border-radius: 0.5vw;
     background-color: #10151D;
     transition: all 0.5s ease-in-out;
+    font-size: 1vw;
 }
 
 .link:hover {
     box-shadow: 0 0 5px 0 #BFC7D2;
 }
 
-/* sezione perche' scegliere noi */
 .scegliere_noi {
     display: flex;
     align-items: center;
@@ -165,6 +124,9 @@
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 15vh;
     border-top: 1px solid white;
@@ -180,4 +142,216 @@
     transition: all 0.3s ease-in-out;
     margin-bottom: 2.5%;
     cursor: pointer;
+}
+
+.container_posizione {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.footer_h3 {
+    font-size: 1vw;
+}
+
+.footer_immagine {
+    width: 1vw;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(170deg);
+}
+
+.sezione_azienda {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    font-size: 0.8vw;
+}
+
+.sezione_servizi {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 0.7vw;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media only screen and (max-width: 768px) {
+    .main {
+        gap: 7.5vh 0;
+    }
+
+    .titolo {
+        font-size: 12vw; /* Riduci la dimensione del titolo */
+    }
+
+    .h2 {
+        font-size: 5vw; /* Riduci la dimensione del sottotitolo */
+    }
+
+    .descrizione {
+        font-size: 4.8vw; /* Riduci la descrizione per schermi più piccoli */
+        width: 80vw; /* Fai la descrizione più larga */
+    }
+
+    .numero {
+        font-size: 10vw; /* Riduci la dimensione dei numeri */
+    }
+
+    .descrizione_numero {
+        width: 35vw;
+        font-size: 4vw; /* Riduci la descrizione dei numeri */
+    }
+
+    .container_titoli {
+        margin-top: 15%; /* Riduci il margine superiore */
+    }
+
+    .freccia {
+        width: 8vw; /* Aumenta la dimensione della freccia per i dispositivi più piccoli */
+    }
+
+    .container_link {
+        gap: 10vw;
+    }
+
+    .link {
+        width: 25vw;
+        height: 5vh;
+        font-size: 4vw;
+        border-radius: 6vw;
+        margin-bottom: 10%;
+    }
+
+    .footer_container {
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, less than 1025px) */
+@media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px) {
+    .titolo {
+        font-size: 9vw;
+    }
+
+    .h2 {
+        font-size: 3vw;
+    }
+
+    .descrizione {
+        font-size: 2.9vw;
+        width: 70vw;
+    }
+
+    .statistiche_container {
+        gap: 15vw;
+    }
+
+    .numero {
+        font-size: 10vw;
+    }
+
+    .descrizione_numero {
+        font-size: 2.5vw;
+    }
+
+    .container_titoli {
+        margin-top: 10%;
+    }
+
+    .freccia {
+        width: 7vw;
+    }
+
+    .container_link {
+        gap: 2vw;
+    }
+
+    .link {
+        width: 25vw;
+        height: 8vh;
+        font-size: 3vw;
+    }
+
+    .freccia_no_animazione {
+        width: 8vw;
+    }
+
+    .footer {
+        height: 15vh;
+    }
+
+    .footer_h3 {
+        font-size: 3vw;
+    }
+
+    .footer_immagine {
+        width: 2vw;
+    }
+
+    .footer li {
+        font-size: 2vw;
+    }
+
+    .footer p {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 3840px) and (min-resolution: 2dppx) {
+    .titolo {
+        font-size: 8vw;
+    }
+
+    .h2 {
+        font-size: 2vw;
+    }
+
+    .descrizione {
+        width: 70vw;
+        font-size: 1.5vw;
+        line-height: 5vh;
+    }
+
+    .statistiche_container {
+        gap: 10vw;
+    }
+
+    .numero {
+        font-size: 6vw;
+    }
+
+    .descrizione_numero {
+        font-size: 1.25vw;
+    }
+    
+    .freccia {
+        width: 4vw;
+    }
+
+    .container_link {
+        gap: 6vw;
+    }
+
+    .link {
+        font-size: 1.5vw;
+    }
+
+    .freccia_no_animazione {
+        width: 4vw;
+    }
+
+    .footer_h3 {
+        font-size: 1.5vw;
+    }
+
+    .footer_immagine {
+        width: 1.25vw;
+    }
+
+    .sezione_azienda {
+        font-size: 1vw;
+    }
+    
+    .sezione_servizi {
+        font-size: 1vw;
+    }
 }

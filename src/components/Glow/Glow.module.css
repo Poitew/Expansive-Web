@@ -28,3 +28,28 @@
     animation: appicc 1.5s;
     top: -150px;
 }
+
+@media (min-width: 3840px) {
+    .container_illuminato {
+        top: -280px;
+        width: 65vw;
+        filter: blur(150px);
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px) {
+    .container_illuminato {
+        top: -200px;
+        width: 75vw;
+        filter: blur(150px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container_illuminato {
+        width: 55vw;
+        top: -120px;
+        width: 75vw;
+        filter: blur(60px);
+    }
+}
