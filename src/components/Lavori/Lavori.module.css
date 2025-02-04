@@ -32,11 +32,11 @@
 .sito_cliente {
     width: 40vw;
     height: 20vh;
-    border: 1px white solid;
-    border-radius: 1vw;
+    border: 3px white solid;
     border-image-slice: 2;
     animation: borderRotate 5s infinite linear;
-    padding: 2%;
+    padding: 1%;
+    background-color: #10151D;
 }
 
 .content_cliente {
@@ -64,38 +64,42 @@
     transition: all 0.3s ease-in-out;
     border-image-slice: 2;
     animation: borderRotate 5s infinite linear;
+    font-size: 1vw;
 }
 
 /* Small devices (landscape phones, max-width: 768px) */
 @media only screen and (max-width: 768px) {
+    .main {
+        text-align: center;
+    }
     .h1 {
-        font-size: 8vw; /* Ridurre la dimensione del titolo per dispositivi più piccoli */
-        margin-top: 5%;
+        font-size: 10vw; /* Ridurre la dimensione del titolo per dispositivi più piccoli */
+        margin-top: 10%;
     }
 
     .sito_cliente {
         width: 80vw; /* Aumenta la larghezza per schermi più piccoli */
-        height: 25vh; /* Aumenta l'altezza per migliorare la leggibilità */
+        height: 20vh; /* Aumenta l'altezza per migliorare la leggibilità */
         border-radius: 3vw; /* Rende il bordo più arrotondato */
     }
 
     .content_cliente {
-        margin: 5% 0 0 5%; /* Spaziatura aumentata per schermi più piccoli */
+        padding: 2%; /* Spaziatura aumentata per schermi più piccoli */
     }
 
     .titolo_cliente {
-        font-size: 5vw; /* Ridurre la dimensione del titolo per dispositivi piccoli */
+        font-size: 7.5vw; /* Ridurre la dimensione del titolo per dispositivi piccoli */
     }
 
     .descrizione_cliente {
-        font-size: 3vw; /* Ridurre la dimensione della descrizione */
-        line-height: 5vh; /* Aumentare l'interlinea per una migliore leggibilità */
+        font-size: 4vw; /* Ridurre la dimensione della descrizione */
+        line-height: 3vh; /* Aumentare l'interlinea per una migliore leggibilità */
     }
 
     .link {
-        width: 60vw; /* Adattare la larghezza del link per dispositivi piccoli */
-        height: 8vh;
-        font-size: 4vw; /* Ridurre la dimensione del testo */
+        width: 40vw; /* Adattare la larghezza del link per dispositivi piccoli */
+        height: 6.5vh;
+        font-size: 5.5vw; /* Ridurre la dimensione del testo */
     }
 }
 
@@ -127,28 +131,32 @@
     }
 }
 
-/* Large devices (desktops, 1025px and up) */
-@media only screen and (min-width: 1025px) {
+@media (min-width: 3840px) and (min-resolution: 2dppx) {
     .h1 {
-        font-size: 4vw;
+        font-size: 5vw;
+        margin-top: 7.5%;
     }
 
     .sito_cliente {
-        width: 40vw; /* Mantieni una larghezza fissa per dispositivi grandi */
-        height: 20vh;
+        width: 60vw;
+        height: 25vh;
+        border: white solid 4px;
+        border-image-slice: 1;
     }
 
     .titolo_cliente {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .descrizione_cliente {
         font-size: 1.5vw;
+        line-height: 5vh;
     }
 
     .link {
-        width: 8vw;
-        height: 5vh;
-        font-size: 1.2vw;
+        width: 12vw;
+        font-size: 1.50vw;
+        border: white solid 4px;
+        border-image-slice: 1;
     }
 }

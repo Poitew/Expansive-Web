@@ -91,7 +91,7 @@ function Footer() {
     return (
         <div className={styles.footer_container}>
             <img className={styles.freccia_no_animazione} src="/arrow_up.svg" alt="Arrow pointing down" onClick={cambiaStato} ref={freccia} />
-
+            
             <footer className={styles.footer} ref={footer}>
 
                 <section className={styles.sezione_azienda}>

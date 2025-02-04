@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Lavori.module.css";
-
+import Glow from "../Glow/Glow";
 function Lavori() {
     return (
         <main className={styles.main}>
+            <Glow></Glow>
             <h1 className={styles.h1}>Per chi abbiano lavorato</h1>
             <a target="_blank" href="https://www.lacoluccieventi.it/" className={styles.sito_cliente}>
                 <div className={styles.content_cliente}>

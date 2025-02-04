@@ -1,14 +1,3 @@
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(150px); 
-    }   
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes borderRotate {
     0% {
       border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
@@ -38,7 +27,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    animation: fadeInFromBottom 1.5s;
     overflow-x: hidden;
     gap: 10vh 0;
 }
@@ -106,6 +94,7 @@
     transition: all 0.3s ease-in-out;
     border-image-slice: 1;
     animation: borderRotate 5s infinite linear;
+    font-size: 1vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -193,38 +182,37 @@
     }
 }
 
-/* Large devices (desktops, 1025px and up) */
-@media only screen and (min-width: 1025px) {
+@media (min-width: 3840px) and (min-resolution: 2dppx) {
     .titolo {
-        font-size: 4vw;
-    }
-
-    .container_servizi {
-        gap: 5vw; /* Maggiore distanza tra i servizi */
+        font-size: 8vw;
+        margin: 7% 0 0 0;
+        letter-spacing: 0.75vw;
     }
 
     .servizio {
-        width: 17.5vw;
-        min-height: 30vh;
-        padding: 5%;
+        width: 20vw;
+        min-height: 20vh;
+        border: white solid 4px;
+        border-image-slice: 1;
     }
-
+    
     .img {
-        width: 5vw;
-        height: 10vh;
+        width: 8vw;
     }
 
     .sotto_titolo {
-        font-size: 1.2vw;
+        font-size: 1.5vw;
     }
 
     .descrizione {
-        font-size: 1vw;
+        font-size: 1.1vw;
+        line-height: 3vh;
     }
 
     .link {
-        width: 8vw;
-        height: 5vh;
-        font-size: 1.2vw;
+        width: 12vw;
+        font-size: 1.4vw;
+        border: white solid 3px;
+        border-image-slice: 1;
     }
 }
