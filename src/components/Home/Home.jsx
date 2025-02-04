@@ -58,7 +58,7 @@ function ScegliereNoi(){
 
             <div className={styles.container_link}>
                 <Link to="/servizi" className={styles.link}>Servizi</Link>
-                <Link Link to="/lavori"  className={styles.link}>Lavori</Link>
+                <Link to="/lavori"  className={styles.link}>Lavori</Link>
             </div>
         </div>
     );
