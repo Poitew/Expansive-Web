@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/lavori"
+  to = "/lavori"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/servizi"
+  to = "/servizi"
+  status = 200
+  force = true
